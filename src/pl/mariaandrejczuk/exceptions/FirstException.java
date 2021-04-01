@@ -38,10 +38,25 @@ public class FirstException {
             String path = scanner.nextLine();
             FileInputStream fileInputStream = new FileInputStream(path);
 
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("Does not exists");
-        }catch(ArithmeticException e){
+        } catch (ArithmeticException e) {
             System.out.println("Do not divide by 0.");
+        }
+        try {
+            System.out.println("Insert number 1: ");
+            a = scanner.nextInt();
+            System.out.println("Insert number 2: ");
+            b = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println(a / b);
+
+            System.out.print("Insert path to file: ");
+            String path = scanner.nextLine();
+            FileInputStream fileInputStream = new FileInputStream(path);
+
+        } catch (FileNotFoundException | ArithmeticException e) {
+            System.out.println("Incorrect data.");
         }
     }
 }
