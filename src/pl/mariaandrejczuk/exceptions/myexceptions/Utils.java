@@ -16,5 +16,13 @@ public final class Utils {
             throw new EmailException();
         }
     }
+
+    public static boolean isValidPesel(String pesel) throws PeselException {
+        if (pesel.length() == 11) {
+            return true;
+        } else {
+            throw new PeselException();
+        }
+    }
 }
 

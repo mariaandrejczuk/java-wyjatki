@@ -7,8 +7,9 @@ public class MyExceptionMain {
 
         try {
             Utils.isValidPassword(pass1, pass2);
-            Utils.isValidEmail("m@wp.pl");
-        } catch (PasswordException | EmailException e) {
+            Utils.isValidEmail("msfsd@wp.pl");
+            Utils.isValidPesel("98220120355");
+        } catch (PasswordException | EmailException | PeselException e) {
             System.out.println(e.getMessage());
         }
     }
